@@ -1,0 +1,31 @@
+# The runtime, added as a submodule
+runtime/
+
+# No game data, ever -- the same rule as the runtime repository.
+Assets/
+*.dol
+*.wad
+*.dls
+key.bin
+
+# Build output
+build/
+build-*/
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.3dsx
+*.apk
+*.aab
+__pycache__/
+*.pyc
+logs/
+
+# Emscripten output and the staged payload (which carries game data)
+build-web/
+build-web-deploy/
+.wrangler/
+*.wasm
+*.data
