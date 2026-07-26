@@ -84,6 +84,31 @@ user supplies their own copy and nothing is distributed. Whoever puts a build
 online owns that decision and its consequences. Nothing in this repository
 contains game data, and nothing here should.
 
+## A note on AI assistance
+
+Parts of this project were written with Claude (Anthropic). Commits carrying a
+`Co-Authored-By: Claude` trailer had AI involvement.
+
+This is stated plainly for two reasons. One is attribution — it should be clear
+which work was not written unaided. The other matters more if you are reading
+the code: AI-written code can be confidently wrong in ways that read as
+authoritative, and its comments are no exception. Treat an explanation of *why*
+something is done a particular way as a claim to check rather than a citation.
+
+## Credits
+
+The approach this project takes comes from
+**[I Built a PS1 Static Recompiler With No Prior Experience (and Claude Code)](https://1379.tech/i-built-a-ps1-static-recompiler-with-no-prior-experience-and-claude-code/)**
+by Matthew Stanley (March 2026), which describes building
+[psxrecomp](https://github.com/mstan/psxrecomp) — a static recompiler for the
+original PlayStation — with Claude Code alongside Ghidra.
+
+What is borrowed is the method that article sets out: translate the binary
+ahead of time, then close the gap with an iterative loop of build, watch it
+fail, fix, and check the fix against the disassembly. The console and the
+instruction set are different here; the approach is not. This project would
+not exist in this form without that write-up.
+
 ## Licence
 
 GPL-2.0-or-later, matching the runtime. See the runtime repository for the full
