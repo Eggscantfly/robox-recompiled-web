@@ -3,9 +3,22 @@
 The browser port of [ROBOX Recompiled](https://github.com/Eggscantfly/robox-recompiled),
 built with Emscripten.
 
-This repository holds the web shell, the deployment harness and the platform
-layer. The game itself lives in the runtime repository and is consumed as a
-submodule.
+## Play it
+
+### **https://joykhloe.com/robox**
+
+Live and fully playable in the browser. Nothing to install, nothing to supply —
+the deployment carries its own data, so the first-run setup that the desktop
+build shows does not appear here.
+
+A desktop browser with WebAssembly and WebGL 2 is required, which in practice
+means anything current. Give it a moment on first load: the payload is
+substantial and is fetched before the game starts.
+
+## What this repository is
+
+The web shell, the deployment harness and the platform layer. The game itself
+lives in the runtime repository and is consumed as a submodule.
 
 ## What is here
 
@@ -63,9 +76,13 @@ nothing for desktop, which was verified before the split was published.
 ## A note on game data
 
 The web build preloads its data into MEMFS, so unlike desktop there is no
-first-run setup screen — it compiles out. Whoever assembles a deployment is
-responsible for what goes into that payload, and retail game data must not be
-served publicly.
+first-run setup screen — it compiles out.
+
+That means a deployment necessarily carries the game's data inside its payload,
+which is a meaningfully different position from the desktop build, where the
+user supplies their own copy and nothing is distributed. Whoever puts a build
+online owns that decision and its consequences. Nothing in this repository
+contains game data, and nothing here should.
 
 ## Licence
 
